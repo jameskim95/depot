@@ -20,7 +20,10 @@
       <li><a href="http://www..../news">News</a></li>
       <li><a href="http://www..../contact">Contact</a></li>
     </ul>
-    <p><strong><%= Time.now.strftime('%I:%M %p') %></strong></p>
+
+    <p>
+      <strong>Bookshelf City Time
+      <%= Time.now.strftime('%I:%M %p') %></strong></p>
   </div>
   <div id="main">
     <%= yield %>
