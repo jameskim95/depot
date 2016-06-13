@@ -27,3 +27,7 @@ Depot::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 end
+
+Depot::Application.configure do
+  config.action_mailer.delivery_method = :test
+end
