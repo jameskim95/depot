@@ -37,15 +37,17 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        Cart.destroy(session[:card_id])
+        Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
-
-        format.html { redirect_to @order, notice: 'Thank you for your order.' }
-        format.json { render action: 'show', status: :created, location: @order }
+        format.html { redirect_to store_url, notice:
+                                               I18n.t('.thanks') }
+        format.json { render action: 'show', status: :created,
+                             location: @order }
       else
         format.html { render action: 'new' }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+        format.json { render json: @order.errors,
+                             status: :unprocessable_entity }
       end
     end
   end
@@ -75,13 +77,14 @@ class OrdersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_order
-      @order = Order.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_order
+    @order = Order.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def order_params
+    params.require(:order).permit(:name, :address, :email, :pay_type)
+  end
+  #...
 end
