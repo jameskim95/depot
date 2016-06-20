@@ -13,11 +13,11 @@
  */
 
 #banner {
-  background: #9c9;
+  background: lightcyan;
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  color: darkblue;
   text-align: center;
 
   img {
@@ -35,7 +35,7 @@
 }
 
 #columns {
-  background: #141;
+  background: lightseagreen;
 
   #main {
     margin-left: 17em;
@@ -47,7 +47,7 @@
     float: left;
     padding: 1em 2em;
     width: 13em;
-    background: #141;
+    background: lightseagreen;
 
     p {
       color: white;
@@ -58,8 +58,8 @@
       padding: 0;
       li {
         list-style: none;
+        color: lightcyan;
         a {
-          color: #bfb;
           font-size: small;
         }
       }
@@ -73,11 +73,11 @@
 
 .depot_form {
   fieldset {
-    background: #efe;
+    background: lightblue;
 
     legend {
-      color: #dfd;
-      background: #141;
+      color: lightblue;
+      background: darkblue;
       font-family: sans-serif;
       padding: 0.2em 1em;
     }

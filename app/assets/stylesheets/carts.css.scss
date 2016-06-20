@@ -8,7 +8,7 @@
 
   .total_line .total_cell {
     font-weight: bold;
-    border-top: 1px solid #595;
+    border-top: 1px solid dodgerblue;
   }
 }
 
@@ -16,7 +16,7 @@
   float: left;
   padding: 1em 2em;
   width: 13em;
-  background: #141;
+  background: darkblue;
 
   form, div {
     display: inline;
@@ -44,7 +44,7 @@
       list-style: none;
 
       a{
-        color: #bfb;
+        color: lightblue;
         font-size: small;
       }
     }
