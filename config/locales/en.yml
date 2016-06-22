@@ -18,22 +18,22 @@ en:
 
   layouts:
     application:
-      title:       "Pragmatic Bookshelf"
-      home:        "Home"
-      questions:   "Questions"
-      news:        "News"
-      contact:     "Contact"
+      title:       "Bookshelf City"
+      home:        "Google"
+      questions:   "Facebook"
+      news:        "Twitter"
+      contact:     "Snapchat"
 
   carts:
     cart:
-      title:       "Your Cart"
-      empty:       "Empty cart"
+      title:       "Your Backpack"
+      empty:       "Empty Backpack"
       checkout:    "Checkout"
 
   store:
     index:
-      title_html:  "Your Pragmatic Catalog"
-      add_html:    "Add to Cart"
+      title_html:  "Bookshelf Town Square"
+      add_html:    "Add to Backpack"
 
   orders:
     new:

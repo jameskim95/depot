@@ -6,4 +6,14 @@ class LineItem < ActiveRecord::Base
   def total_price
     product.price * quantity
   end
-end
+
+  def decrement
+    if self.quantity > 1
+      self.quantity -= 1
+    else
+      self.destroy
+    end
+    self
+    end
+  end
+

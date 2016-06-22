@@ -17,7 +17,11 @@ Depot::Application.routes.draw do
 
   scope '(:locale)' do
     resources :orders
-    resources :line_items
+    resources :line_items do
+      member do
+        put 'decrement'
+      end
+    end
     resources :carts
     root 'store#index', as: 'store', via: :all
     end
