@@ -36,6 +36,8 @@
       <li><strong><%= Time.now.strftime('%I:%M %p') %></strong></li>
       <li><strong>You've been here <%= pluralize(@count.to_i, "times")%>.</strong></li>
       <li><strong>Thank you for visiting.</strong></li>
+      <%= link_to "Login", products_path %>
+      <%= link_to "Store", store_path %>
 
     </ul>
 
